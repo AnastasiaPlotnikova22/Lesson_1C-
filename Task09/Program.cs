@@ -7,7 +7,7 @@
 // 12-> 2
 // 85 -> 8
 
-int number = new Random().Next(10, 100);
+int number = new Random().Next(10, 100); // последнее число не входит в диапозон
 Console.WriteLine($"Случайное число из отрезка 10 -99 => {number}");
 
 int firstDigit = number / 10; // 7
