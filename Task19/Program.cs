@@ -14,9 +14,7 @@ bool Palindrome(string num)
 Console.WriteLine("Введите пятизначное число: ");
 string? number = Console.ReadLine();
 
-// bool result = Palindrome(number);
-
-if(number .Length == 5)
+if(number! .Length == 5)
 {
     bool result = Palindrome(number);
     Console.WriteLine($"{result}"); 

@@ -4,9 +4,9 @@
 
 
 Console.WriteLine("Введите номер плоскости: ");
-string number = Console.ReadLine(); //int number = Convert.ToInt32(Console.ReadLine());
+string? number = Console.ReadLine(); //int number = Convert.ToInt32(Console.ReadLine());
 
-string quarter= Quarter(number);
+string quarter= Quarter(number!);
 
 Console.WriteLine(quarter);  //Console.WriteLine($"{quarter}");
 

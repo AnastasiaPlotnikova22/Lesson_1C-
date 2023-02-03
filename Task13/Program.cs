@@ -19,7 +19,6 @@ int GetDigit(int num)
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if(number < 0) number =  number * (-1);
 if(number < 99) Console.WriteLine("Третьей цифры нет.");
 else 
 {
