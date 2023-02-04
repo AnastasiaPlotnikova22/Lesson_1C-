@@ -7,10 +7,13 @@
 
 Console.WriteLine("Введите целое положительное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+if (number > 0)
+{
+    int sumNumbers= SumNumbers(number);
+    Console.WriteLine($"Сумма чисел от 1 до {number} = {sumNumbers}");
 
-int sumNumbers= SumNumbers(number);
-
-Console.WriteLine($"Сумма чисел от 1 до {number} = {sumNumbers}");
+}
+else Console.WriteLine("Введино некорректное значение");
 
 int SumNumbers(int num)
 {
