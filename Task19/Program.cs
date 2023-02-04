@@ -8,7 +8,7 @@
 
 bool Palindrome(string num)
 {
-    return(num[0] == num[4] || num[1] == num[3]);
+    return(num[0] == num[4] && num[1] == num[3]);
 }
 
 Console.WriteLine("Введите пятизначное число: ");
