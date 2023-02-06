@@ -3,23 +3,24 @@
 // единицами в случайном порядке.
 // [1,0,1,1,0,1,0,0]
 
-int[] GenerateArray()
+int[] GenerateArray(int size,int min, int max)
 {
-    int[] arr = new int[8];
-    for (int i = 0; i < arr.Length; i++)
-    {
-        arr[i] = new Random().Next(0, 2); // 0, 1
-    }
-    return arr;
+int[] arr = new int[size];
+Random rnd = new Random();
+for (int i = 0; i < arr.Length; i++)
+{
+arr[i] = rnd.Next(min, max + 1);
+}
+return arr;
 }
 
-void PrintArray(int[] arr) 
+void PrintArray(int[] arr)
 {
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write($"{arr[i]}");
-    }
+for (int i = 0; i < arr.Length; i++)
+{
+Console.Write($"{arr[i]} " );
+}
 }
 
-int[] array = GenerateArray();
+int [] array = GenerateArray(8, 0, 1);
 PrintArray(array);
