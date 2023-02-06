@@ -12,11 +12,19 @@ Console.WriteLine($"Сумма чцифр в числе = {sumNumbers}");
 
 int SumNumbers(int num)
 {
+    // int sum = 0;
+    // int a1 = num % 10;
+    // int a2 = num / 10 % 10;
+    // int a3 = num / 100 % 10;
+    // int a4 = num / 1000;
+    // sum = a1 + a2 + a3 + a4;
+    // return sum;
+
     int sum = 0;
-    int a1 = num % 10;
-    int a2 = num / 10 % 10;
-    int a3 = num / 100 % 10;
-    int a4 = num / 1000;
-    sum = a1 + a2 + a3 + a4;
+    while (num > 0)
+    {
+        sum = sum + num % 10;
+        num = num / 10;
+    }
     return sum;
 }
