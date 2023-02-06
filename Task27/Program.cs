@@ -20,8 +20,9 @@ int SumNumbers(int num)
     // sum = a1 + a2 + a3 + a4;
     // return sum;
 
+    num = Math.Abs(num);
     int sum = 0;
-    while (num > 0)
+    while (num != 0)
     {
         sum = sum + num % 10;
         num = num / 10;
