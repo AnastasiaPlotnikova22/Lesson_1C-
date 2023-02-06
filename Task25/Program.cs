@@ -11,7 +11,9 @@ Console.WriteLine("Введите число B: ");
 int numbet2 = Convert.ToInt32(Console.ReadLine());
 
 double result = Degree(numbet1, numbet2);
-Console.WriteLine($"Возведение числа в натуральную степень {result}");
+
+if(numbet2 > 0)Console.WriteLine($"Возведение числа в натуральную степень {result}");
+else Console.WriteLine("Введено не натуральное число B");
 
 double Degree(int num1, int num2)
 {
