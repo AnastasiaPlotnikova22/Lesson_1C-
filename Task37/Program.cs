@@ -4,7 +4,7 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-int[] GreateArrayRnd(int size, int min, int max)
+int[] CreateArrayRnd(int size, int min, int max)
 {
     int[] array = new int[size];
     Random rnd = new Random();
@@ -42,7 +42,7 @@ int[] ArrayProductNumberFirstLast(int[] array)
     return arrayNew;
 }
 
-int[] arr = GreateArrayRnd(5, 0, 10);
+int[] arr = CreateArrayRnd(5, 0, 10);
 PrintArray(arr);
 
 int[] arrNew = ArrayProductNumberFirstLast(arr);

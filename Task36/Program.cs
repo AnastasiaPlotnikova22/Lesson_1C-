@@ -4,7 +4,7 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-int[] GreateArrayRnd(int size, int min, int max)
+int[] CreateArrayRnd(int size, int min, int max)
 {
     int[] array = new int[size];
     Random rnd = new Random();
@@ -37,7 +37,7 @@ int OddNumbersArray(int[] array)
      }
     return sum;
 }
-int[] arr = GreateArrayRnd(5, 1, 10);
+int[] arr = CreateArrayRnd(5, 1, 10);
 PrintArray(arr);
 int oddNumbersArray = OddNumbersArray(arr);
 Console.WriteLine($" -> {oddNumbersArray}");

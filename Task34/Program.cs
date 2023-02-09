@@ -4,7 +4,7 @@
 // массиве.
 // [345, 897, 568, 234] -> 2
 
-int[] GreateArrayRnd(int size, int min, int max)
+int[] CreateArrayRnd(int size, int min, int max)
 {
     int[] array = new int[size];
     Random rnd = new Random();
@@ -37,7 +37,7 @@ int EvenNumbersArray(int[] array)
 
 }
 
-int[] arr = GreateArrayRnd(5, 100, 999);
+int[] arr = CreateArrayRnd(5, 100, 999);
 PrintArray(arr);
 // EvenNumbersArray(arr);
 

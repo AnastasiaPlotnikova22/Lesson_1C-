@@ -8,7 +8,7 @@
 // [10, 11, 12, 13, 14] -> 5
 
 //Функция создания массива
-int[] GreateArrayRnd(int size, int min, int max)
+int[] CreateArrayRnd(int size, int min, int max)
 {
     int[] array = new int[size];
     Random rnd = new Random();
@@ -44,7 +44,7 @@ int ReturnNumberElements(int[] array, int min, int max)
 }
 
 
-int[] arr = GreateArrayRnd(123, 0, 100);
+int[] arr = CreateArrayRnd(123, 0, 100);
 PrintArray(arr);
 int returnNumberElements = ReturnNumberElements(arr, 10, 99);
 Console.WriteLine($" -> {returnNumberElements}");
