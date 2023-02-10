@@ -6,13 +6,13 @@
 
 
 
-int[] CreateArrayRnd(int size, int min, int max)
+int[] CreateArrayRnd(int size)
 {
     int[] array = new int[size];
-    Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.Next(min, max + 1);
+        Console.Write($"Введите число[{i}] = ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;
 }
@@ -30,21 +30,22 @@ void PrintArray(int[] array)
 
 int ArrayM (int[] array)
 {
-    int count = 0;
+    int resalt = 0;
     for (int i = 0; i < array.Length; i++)
     {
     if (array[i] > 0)
       {
-        count++;
+        resalt++;
       }
     }
-    return count;
+    return resalt;
  
 }
 
 Console.WriteLine("Введите количество чисел для проверки:");
 int sizeArray = Convert.ToInt32(Console.ReadLine());
-int[] arrayNumb = CreateArrayRnd(sizeArray, -1000, 1000);
+Console.WriteLine("Введите числа для проверки:");
+int[] arrayNumb = CreateArrayRnd(sizeArray);
 PrintArray(arrayNumb);
 int arrayM = ArrayM(arrayNumb);
 Console.WriteLine($" -> {arrayM}");
