@@ -49,7 +49,7 @@ int DiagonalValueSum(int[,] matrix)
     return sum;
 }
 
-int[,] matr = GenerateMatrixRndInt(6, 5, 0, 10);
+int[,] matr = GenerateMatrixRndInt(4, 3, 0, 10);
 PrintMatrix(matr);
 int diagonalValueSum = DiagonalValueSum(matr);
 Console.WriteLine();
