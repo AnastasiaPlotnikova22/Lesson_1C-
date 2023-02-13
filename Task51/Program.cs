@@ -30,7 +30,7 @@ void PrintMatrix(int[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j],5} | ");
+            Console.Write($"{matrix[i, j],3} | ");
         }
         Console.WriteLine();
     }
@@ -39,19 +39,12 @@ void PrintMatrix(int[,] matrix)
 int DiagonalValueSum(int[,] matrix)
 {
     int sum = default;
-    if (matrix.GetLength(1) > matrix.GetLength(0))
+    int size = matrix.GetLength(0);
+    if (matrix.GetLength(0) > matrix.GetLength(1)) size = matrix.GetLength(1);
+
+    for (int i = 0; i < size; i++)
     {
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            sum += matrix[i, i];
-        }
-    }
-    else
-    {
-        for (int i = 0; i < matrix.GetLength(1); i++)
-        {
-            sum += matrix[i, i];
-        }
+        sum += matrix[i, i];
     }
     return sum;
 }
