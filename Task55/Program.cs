@@ -33,16 +33,14 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] Replece(int[,] matrix)
+int[,] ReplecRowsColumns(int[,] matrix)
 {
    int[,] tmpArray = new int[matrix.GetLength(0), matrix.GetLength(1)] ;
    for (int i = 0; i < matrix.GetLength(0); i++)
    {
       for (int j = 0; j < matrix.GetLength(1); j++)
       {
-        int tmp = matrix[i, j];
         tmpArray[j,i] = matrix[i, j];
-        matrix[i, j] = tmp;
       }
    }
    return tmpArray;
@@ -53,7 +51,7 @@ PrintMatrix(matrix);
 Console.WriteLine();
 if(matrix.GetLength(0) == matrix.GetLength(1)) 
 {
-    int[,] newMatrix = Replece(matrix);
+    int[,] newMatrix = ReplecRowsColumns(matrix);
     PrintMatrix(matrix);
 }
 else Console.WriteLine("Число строк и столбцов несовпадает!");
