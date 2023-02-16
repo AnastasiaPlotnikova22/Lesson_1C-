@@ -32,11 +32,11 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void Replece(int[,] matrix)
+void RepleceRows(int[,] matrix)
 {
-    int tmp = 0;
    for (int i = 0; i < matrix.GetLength(1); i++)
    {
+      int tmp = 0;
       tmp = matrix[0, i];
       matrix[0, i] = matrix[matrix.GetLength(0) - 1, i];
       matrix[matrix.GetLength(0) - 1, i] = tmp;
@@ -46,5 +46,5 @@ void Replece(int[,] matrix)
 int[,] matrix = CreateMatrixRndInt(3, 4, 1, 10);
 PrintMatrix(matrix);
 Console.WriteLine();
-Replece(matrix);
+RepleceRows(matrix);
 PrintMatrix(matrix);
